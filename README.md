@@ -12,6 +12,8 @@ This is a template repository to create your own GPU rental website based on
 2. Create account on [Vercel](https://vercel.com/)
 3. Import your forked repository to [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 4. Go to Settings -> Domains and add your custom domain
+5. Set `NEXT_PUBLIC_RIFT_API_KEY` to the key provided by CloudRift. It is recommended to set the environment variable
+   in Vercel dashboard, but to quickly test locally you can edit `next.config.mjs` and set it there.
 
 ## Localization
 

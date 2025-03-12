@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
+    // NEXT_PUBLIC_RIFT_API_KEY: undefined,
   },
   compiler: {
     // Remove console logs in production environments
