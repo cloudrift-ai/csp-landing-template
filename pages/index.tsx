@@ -25,7 +25,7 @@ export default function Home() {
        ]}
      />
      <Navbar />
-     <div className="pt-12">
+     <div>
        <HeroSection />
        <Pricing />
        <Testimonials />

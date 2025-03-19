@@ -25,7 +25,7 @@ const AboutUsPage: React.FC = () => {
         ]}
       />
       <Navbar />
-      <div className="pt-10">
+      <div>
         <AboutUsHeroSection />
         <PhilosophySection />
         <FounderSection />

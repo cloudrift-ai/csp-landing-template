@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Link from "./foundational/Link";
+import Image from "next/image";
 import "../app/globals.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import { FaDiscord } from "react-icons/fa";
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black pb-3 pt-5">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-lg pb-4 pt-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
         <div className="flex items-center">
           <Link href="/">
@@ -31,7 +32,7 @@ const Navbar = () => {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
         <nav className={`w-full lg:w-auto ${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
           <ul className="mt-4 flex flex-col space-y-2 lg:mt-0 lg:flex-row lg:space-x-8 lg:space-y-0">
@@ -65,8 +66,8 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="[[Discord]]">
-                <span onClick={closeMenu} className="block px-4 py-0 text-white hover:text-gray-300 lg:inline lg:py-0 cursor-pointer">
-                  <i className="bi bi-discord" style={{ fontSize: '1.5rem', position: 'relative', top: '-5px' }}></i>
+                <span onClick={closeMenu} className="block px-4 py-2 text-white hover:text-gray-300 lg:py-0 cursor-pointer h-full">
+                  <FaDiscord size={26} />
                 </span>
               </Link>
             </li>
