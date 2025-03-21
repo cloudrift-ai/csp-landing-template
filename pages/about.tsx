@@ -5,6 +5,7 @@ import AboutUsHeroSection from "../components/AboutUsHeroSection";
 import PhilosophySection from "../components/PhilosophySection";
 import FounderSection from "../components/FounderSection";
 import JoinUsSection from "../components/JoinUsSection";
+import Footer from "../components/Footer";
 
 const AboutUsPage: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const AboutUsPage: React.FC = () => {
         <FounderSection />
         <JoinUsSection />
       </div>
+      <Footer />
     </div>
   );
 };

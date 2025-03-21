@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const RTX4090Page: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -270,6 +271,7 @@ const RTX4090Page: React.FC = () => {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
