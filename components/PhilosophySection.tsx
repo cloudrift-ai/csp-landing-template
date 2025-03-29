@@ -1,5 +1,4 @@
 import React from "react";
-import "../app/globals.css";
 
 const PhilosophySection: React.FC = () => {
   return (

@@ -1,5 +1,4 @@
 import React from "react";
-import "../app/globals.css";
 import Image from "next/image";
 
 const FounderSection: React.FC = () => {

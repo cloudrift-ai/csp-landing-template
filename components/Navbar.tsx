@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Link from "./foundational/Link";
-import Image from "next/image";
-import "../app/globals.css";
 import { FaDiscord } from "react-icons/fa";
 import { FiMenu, FiX } from 'react-icons/fi';
 

@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 import { Instrument_Sans } from 'next/font/google';
+import '../styles/globals.css';
 
 const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
