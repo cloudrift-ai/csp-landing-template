@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function apiRequest<T>(endpoint: string, token: boolean, requestData?: any): Promise<T> {
     const apiUrl = getRiftApiUrl();
     const method = "POST";
@@ -20,6 +21,7 @@ export async function apiRequest<T>(endpoint: string, token: boolean, requestDat
         }
     }
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const body: any = {};
     if (requestData) {
         body.data = requestData || {};
@@ -53,11 +55,12 @@ export async function apiRequest<T>(endpoint: string, token: boolean, requestDat
                 console.log(`Parsed JSON response:`, jsonResponse);
                 return jsonResponse.data ? jsonResponse : ({} as T);
             } catch (error) {
-                console.error(`Failed to parse response as JSON. Status code: ${response.status}, response: ${responseText}`);
+                console.error(`Failed to parse response as JSON. Status code: ${response.status}, response: ${responseText} ${error}`);
                 throw new Error(`Failed to parse response as JSON. Status code: ${response.status}, response: ${responseText}`);
             }
         } else {
             console.log(`Received text response:`, responseText);
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             return responseText as any;
         }
     } catch (error) {
