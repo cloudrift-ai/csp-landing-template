@@ -52,17 +52,17 @@ const Footer: React.FC = () => {
 
           <div>
             <h3 className="text-foreground font-bold mb-4">Connect</h3>
-            <div className="flex gap-4 text-accent hover:text-foreground transition-colors">
-              <Link href="#">
+            <div className="flex gap-4">
+              <Link href="#" className='text-accent hover:text-foreground transition-colors'>
                 <FaTwitter className="w-5 h-5" />
               </Link>
-              <Link href="#" >
+              <Link href="#" className='text-accent hover:text-foreground transition-colors'>
                 <FaGithub className="w-5 h-5" />
               </Link>
-              <Link href="#">
+              <Link href="#" className='text-accent hover:text-foreground transition-colors'>
                 <FaLinkedin className="w-5 h-5" />
               </Link>
-              <Link href="#">
+              <Link href="#" className='text-accent hover:text-foreground transition-colors'>
                 <FaDiscord className="w-5 h-5" />
               </Link>
             </div>
