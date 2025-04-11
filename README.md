@@ -21,6 +21,6 @@ This is a template repository to create your own GPU rental website based on
 2. Keywords are important for SEO, so make sure to replace them with relevant ones. It is also useful to create additional
    pages with keywords in mentioned in H1 tags to improve SEO.
 3. Adjust information about datacenter design: network speed, ISP speed, cooling, power, security, etc.
-4. Replace logos like `app/favicon.ico` and others in `public` folder with your own brand images.
+4. Replace logos like `public/favicon.ico` and others in `public` folder with your own brand images.
 5. Create a Discord server for your community and replace the `[[Discord]]` link in `components/Navbar.tsx` with your own.
    Add CloudRift team members to your Discord server to provide support to your customers. We can also provide support over slack.

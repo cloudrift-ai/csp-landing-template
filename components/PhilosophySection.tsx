@@ -1,23 +1,53 @@
-import React from "react";
+import React from 'react';
+import Image from 'next/image';
 
 const PhilosophySection: React.FC = () => {
+  const philosophies = [
+    {
+      title: "Innovation First",
+      description: "We believe in pushing the boundaries of what's possible in cloud computing and AI infrastructure."
+    },
+    {
+      title: "Accessibility",
+      description: "Making high-performance computing accessible to everyone, from startups to enterprises."
+    },
+    {
+      title: "Sustainability",
+      description: "Committed to environmental responsibility through energy-efficient infrastructure."
+    }
+  ];
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-black px-4 text-center">
-      <div className="">
-        <h2 className="text-7xl font-extrabold text-white">Our Philosophy</h2>
-        <p className="mt-10 max-w-7xl text-xl font-light text-[#717177]">
-          At [[Brand]], we are committed to more than just providing
-          cutting-edge GPU solutions; we aim to transform how our clients
-          experience technology. Our philosophy is built on a foundation of deep
-          technical expertise and personalized client engagement. By designing,
-          building, stress-testing, and maintaining all our hardware, we have
-          unparalleled control over the quality and reliability of our services.
-          This comprehensive oversight allows us to deliver superior performance
-          that our clients can depend on.
-        </p>
+    <section className="py-20 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Image Column */}
+        <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
+          <Image
+            src="/gpu-center.jpeg" 
+            alt="Data Center GPU Racks"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+
+        {/* Text Column */}
+        <div>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Our Philosophy</h2>
+          <div className="space-y-8">
+            {philosophies.map((item, index) => (
+              <div key={index} className="flex">
+                <div className="flex-shrink-0 w-1 bg-accent mr-4"></div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-foreground">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default PhilosophySection;
+export default PhilosophySection; 
