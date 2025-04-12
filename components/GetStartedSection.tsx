@@ -11,13 +11,14 @@ const GetStartedSection: React.FC = () => {
     },
     {
       stepNumber: 2,
-      title: "Choose GPU Configuration",
-      description: "Select from our range of GPU options based on your requirements."
+      title: "Add Credits",
+      description: "Set up your preferred payment method for minute-based billing and add credits to your account."
+   
     },
     {
       stepNumber: 3,
-      title: "Add Credits",
-      description: "Set up your preferred payment method for minute-based billing and add credits to your account."
+      title: "Choose GPU Configuration",
+      description: "Select from our range of GPU options based on your requirements."
     },
     {
       stepNumber: 4,

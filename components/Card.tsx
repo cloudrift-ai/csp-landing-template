@@ -124,7 +124,7 @@ const Card: React.FC<CardProps> = (props) => {
     return (
       <div 
         className= {`${baseStyles} w-full flex items-start gap-6 p-5`}  >
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-foreground">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-primary">
           {props.stepNumber}
         </div>
         <div className="flex flex-col gap-2">
@@ -142,7 +142,7 @@ const Card: React.FC<CardProps> = (props) => {
 
     return (
       <div className={`${baseStyles} p-8`}>
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-6">
           <HiChip className={`w-6 h-6 text-accent`} />
           {props.tier && (
             <div className={`px-3 py-1 rounded-full ${styles.badge}`}>

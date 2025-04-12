@@ -3,82 +3,82 @@
 
 /* NeuralRack Theme (Default) */
 .theme-neuralrack {
+  --background: #141414;
+  --accent: #3B82F6;
+  --type-color: #E5E7EB;
+  --card-bg: #202024;
   --primary: #191970;
+  --body-text-color: #E5E7EB;
+  --drop-shadow-color: #212121;
   --primary-dark: #141460;
   --primary-light: #1E1E80;
-  --background: #141414;
   --surface: #072f56;
   --surface-dark: #034784;
   --foreground: #E5E7EB;
-  --accent: #3B82F6;
   --button-bg: #191970;
   --button-hover-bg: #141460;
-  --card-bg: #202024;
   --border-color: #374151;
   --placeholder-color: #6B7280;
-  --drop-shadow-color: #212121;
-  --type-color: #E5E7EB;
-  --body-text-color: #E5E7EB;
 }
 
 /* Alternative 1 Theme */
 .theme-alt1 {
+  --background: #111827;
+  --accent: #4D90FE;
+  --type-color: #FFFFFF;
+  --card-bg: #1F2937;
   --primary: #12151B;
+  --body-text-color: #B1B4BA;
+  --drop-shadow-color: #3B82F6;
   --primary-dark: #0E1015;
   --primary-light: #161A22;
-  --background: #111827;
   --surface: #1F2937;
   --surface-dark: #111827;
   --foreground: #FFFFFF;
-  --accent: #4D90FE;
   --button-bg: #12151B;
   --button-hover-bg: #0E1015;
-  --card-bg: #1F2937;
   --border-color: #374151;
   --placeholder-color: #6B7280;
-  --drop-shadow-color: #3B82F6;
-  --type-color: #FFFFFF;
-  --body-text-color: #B1B4BA;
 }
 
 /* Alternative 2 Theme */
 .theme-alt2 {
+  --background: #131313;
+  --accent: #5DB8AF;
+  --type-color: #FFFFFF;
+  --card-bg: #182C2C;
   --primary: #1C231E;
+  --body-text-color: #9CA3AF;
+  --drop-shadow-color: #3E9255;
   --primary-dark: #161C19;
   --primary-light: #222A24;
-  --background: #131313;
   --surface: #182C2C;
   --surface-dark: #131313;
   --foreground: #FFFFFF;
-  --accent: #4CA764;
   --button-bg: #1C231E;
   --button-hover-bg: #161C19;
-  --card-bg: #182C2C;
   --border-color: #374151;
   --placeholder-color: #6B7280;
-  --drop-shadow-color: #3E9255;
-  --type-color: #FFFFFF;
-  --body-text-color: #9CA3AF;
 }
 
 /* Light Mode Theme */
 .theme-light {
-  --primary: #CCD3DC;
+  --background: #F8F8F8;
+  --accent: #174646;
+  --type-color: #1F1F1F;
+  --card-bg: #FFFFFF;
+  --primary: #FFFFFF;
+  --body-text-color: #454545;
+  --drop-shadow-color: #212121;
   --primary-dark: #B8C0CB;
   --primary-light: #DEE3E9;
-  --background: #EDEDED;
   --surface: #FFFFFF;
   --surface-dark: #E5E7EB;
   --foreground: #171717;
-  --accent: #174646;
-  --button-bg: #CCD3DC;
+  --button-bg: #FFFFFF;
   --button-hover-bg: #B8C0CB;
-  --card-bg: #BBF1F1;
   --border-color: #D1D5DB;
   --placeholder-color: #9CA3AF;
-  --drop-shadow-color: #212121;
-  --type-color: #171717;
-  --body-text-color: #454545;
 }
 
 @theme inline {
