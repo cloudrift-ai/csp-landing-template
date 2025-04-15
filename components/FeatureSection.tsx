@@ -4,7 +4,7 @@ import { BsLightningFill, BsHddStackFill, BsHddNetworkFill } from 'react-icons/b
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="w-full h-auto py-24">
+    <section className="w-full h-auto py-24 max-h-[600px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -20,18 +20,21 @@ const FeatureSection: React.FC = () => {
             title="Pay Per Minute"
             description="No commitments or contracts. Only pay for what you use, billed by the minute."
             icon={<BsLightningFill className="w-10 h-10" />}
+            className="border-accent"
           />
           
           <Card 
             title="Tier 3 Design"
             description="Redundant power, cooling, and networking for maximum uptime and reliability."
             icon={<BsHddStackFill className="w-10 h-10" />}
+            className="border-accent"
           />
           
           <Card 
             title="High-Speed Network"
             description="Unmetered 10Gb/s internet and 25Gb/s internal network connectivity."
             icon={<BsHddNetworkFill className="w-10 h-10" />}
+            className="border-accent"
           />
         </div>
       </div>

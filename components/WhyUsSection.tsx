@@ -37,8 +37,8 @@ const whyUsFeatures = [
 
 const WhyUsSection: React.FC = () => {
   return (
-    <section className="py-20 px-4" id="features">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-4" id="features">
+      <div className="max-w-[1200px] mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">Why Choose Us</h2>
           <p className="text-foreground text-lg max-w-2xl mx-auto">

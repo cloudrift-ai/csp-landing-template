@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function apiRequest<T>(endpoint: string, token: boolean, requestData?: any): Promise<T> {
+export async function apiRequest<T>(endpoint: string, requestData?: any): Promise<T> {
     const apiUrl = getRiftApiUrl();
     const method = "POST";
     const headers: HeadersInit = {
@@ -11,15 +11,6 @@ export async function apiRequest<T>(endpoint: string, token: boolean, requestDat
         headers["X-API-Key"] = key;
     }
 
-    if (token) {
-        const authToken = localStorage.getItem("token");
-        if (authToken) {
-            headers["Authorization"] = "Bearer " + authToken;
-        } else {
-            console.error("Token not found in localStorage.");
-            throw new Error("Authorization token is missing.");
-        }
-    }
     
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const body: any = {};

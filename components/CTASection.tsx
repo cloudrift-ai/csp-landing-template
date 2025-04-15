@@ -5,7 +5,7 @@ import { FaDiscord } from 'react-icons/fa';
 const CTASection: React.FC = () => {
   return (
     <section 
-      className="py-20 text-center"
+      className="text-center flex items-center justify-center min-h-[520px] gap-y-12"
       style={{
 
         background: 'linear-gradient(94deg, var(--color-drop-shadow, rgba(33, 33, 33, 0.30)) 0.29%, var(--color-card-bg, rgba(32, 32, 36, 0.30)) 75.52%, var(--color-card-bg, rgba(32, 32, 36, 0.30)) 97.47%), var(--color-background)'

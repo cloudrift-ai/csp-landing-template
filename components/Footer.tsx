@@ -6,8 +6,8 @@ import { BiChip } from 'react-icons/bi';
 const Footer: React.FC = () => {
   return (
     <footer className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <BiChip className="w-8 h-8 text-accent" />

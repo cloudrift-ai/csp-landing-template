@@ -18,7 +18,7 @@ const PhilosophySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="flex justify-center items-center min-h-[900px] px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Image Column */}
         <div className="relative w-full h-[400px] rounded-lg overflow-hidden">

@@ -117,7 +117,7 @@ const ConfigurationsSection: React.FC = () => {
         <div className="mb-10">
           <h2 className="text-3xl font-bold text-foreground mb-8">GPUs</h2>
           <p className="text-foreground/90 text-xl mb-8">Choose from our wide range of NVIDIA GPUs for any workload</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12">
             {gpuConfigurations.map((config, index) => (
               <Card
                 key={index}
@@ -135,7 +135,7 @@ const ConfigurationsSection: React.FC = () => {
         
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-foreground mb-8">CPUs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-y-12">
             {cpuConfigurations.map((config, index) => (
               <Card
                 key={index}

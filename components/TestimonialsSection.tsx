@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full mt-15 h-auto flex items-center justify-center">
+    <section className="mt-15 h-auto flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -36,7 +36,7 @@ const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 max-w-[66rem] mx-auto lg:grid lg:grid-cols-3 lg:gap-6">
+        <div className="flex flex-col gap-6 mx-auto lg:grid lg:grid-cols-3 lg:gap-6 max-w-[1200px]">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}

@@ -61,7 +61,11 @@ interface TeamCardProps extends BaseCardProps {
 type CardProps = FeatureCardProps | TestimonialCardProps | FAQCardProps | StepCardProps | PricingCardProps | TeamCardProps;
 
 const Card: React.FC<CardProps> = (props) => {
-  const baseStyles = "rounded-xl border border-border-color bg-card-bg";
+  const baseStyles = "rounded-xl border bg-card-bg";
+  
+  const borderColorClass = props.className && props.className.includes('border-') 
+    ? props.className 
+    : 'border-border-color';
   
   const getTierStyles = (tier: string) => {
     switch(tier) {
@@ -91,7 +95,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   if (props.variant === 'testimonial') {
     return (
-      <div className={`${baseStyles} p-6 flex flex-col gap-6`}>
+      <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-6 w-[360px]`}>
         <div className="flex items-center gap-4">
           <div className="relative w-12 h-12">
             <Image 
@@ -113,7 +117,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   if (props.variant === 'faq') {
     return (
-      <div className={`${baseStyles} p-8 flex flex-col gap-4`}>
+      <div className={`${baseStyles} ${borderColorClass} p-8 flex flex-col gap-4`}>
         <h3 className="text-foreground text-xl font-semibold">{props.question}</h3>
         <p className="text-foreground">{props.answer}</p>
       </div>
@@ -122,8 +126,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   if (props.variant === 'step') { 
     return (
-      <div 
-        className= {`${baseStyles} w-full flex items-start gap-6 p-5`}  >
+      <div className={`${baseStyles} ${borderColorClass} w-full flex items-start gap-6 p-5`}>
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-primary">
           {props.stepNumber}
         </div>
@@ -140,8 +143,12 @@ const Card: React.FC<CardProps> = (props) => {
     const buttonLabel = props.buttonLabel || 'Rent Now';
     const buttonLink = props.buttonLink || '/console';
 
+    const pricingBorderClass = props.className && props.className.includes('border-') 
+      ? props.className 
+      : 'border-accent';
+
     return (
-      <div className={`${baseStyles} p-8`}>
+      <div className={`${baseStyles} ${pricingBorderClass} w-[360px] p-8`}>
         <div className="flex justify-between items-center mb-6">
           <HiChip className={`w-6 h-6 text-accent`} />
           {props.tier && (
@@ -172,8 +179,12 @@ const Card: React.FC<CardProps> = (props) => {
   }
 
   if (props.variant === 'team') {
+    const teamBorderClass = props.className && props.className.includes('border-') 
+      ? props.className 
+      : '';
+    
     return (
-      <div className="rounded-xl  bg-card-bg p-6 flex flex-col items-center text-center">
+      <div className={`rounded-xl ${teamBorderClass} bg-card-bg p-6 flex flex-col items-center text-center`}>
         <div className="relative w-32 h-32 mb-4">
           <Image
             src={props.image}
@@ -207,7 +218,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   // Default feature card
   return (
-    <div className={`${baseStyles} p-8 flex flex-col gap-5`}>
+    <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-5 max-w-[360px]`}>
       <div className="flex items-center gap-4">
         <div className="text-accent">
           {props.icon}

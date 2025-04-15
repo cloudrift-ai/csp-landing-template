@@ -4,7 +4,7 @@ import { FaQuestionCircle, FaServer, FaDesktop } from 'react-icons/fa';
 
 const InstanceTypes: React.FC = () => {
   return (
-    <section className="w-full h-auto py-24">
+    <section className="w-full h-auto py-24 max-h-[600px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -29,7 +29,7 @@ const InstanceTypes: React.FC = () => {
           />
           
           <Card 
-            title="Bare Metal"
+            title="Bare Metal - Coming Soon"
             description="Gain full control with dedicated hardware, offering maximum performance and flexibility."
             icon={<FaServer className="w-10 h-10" />}
           />

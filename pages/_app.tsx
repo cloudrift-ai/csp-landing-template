@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Instrument_Sans } from "next/font/google";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const instrumentSans = Instrument_Sans({
   subsets: ['latin'],
@@ -12,11 +13,14 @@ const instrumentSans = Instrument_Sans({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const queryClient = new QueryClient();
   return (
-    <ThemeProvider>
-      <div className={`${instrumentSans.variable} font-sans`}>
-        <Component {...pageProps} />
-      </div>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <div className={`${instrumentSans.variable} font-sans`}>
+          <Component {...pageProps} />
+        </div>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }

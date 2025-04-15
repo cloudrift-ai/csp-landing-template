@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-20 lg:gap-32 max-w-7xl w-full">
           {/* Text Content */}
           <div className="flex flex-col gap-10 items-center lg:items-start text-center lg:text-left w-full lg:w-1/2">
-            <h1 className="text-[3.5rem] font-bold text-foreground leading-[4.625rem] tracking-[0.035rem] font-sans">
+            <h1 className="text-[3rem] font-bold text-foreground leading-[4rem] tracking-[0.035rem] font-sans">
               Rent <span className="text-accent">[Insert Model]</span> <br />
               GPUs for AI and ML
             </h1>
