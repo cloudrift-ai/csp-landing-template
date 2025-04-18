@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="mt-15 h-auto flex items-center justify-center">
+    <section className="h-auto py-20 md:max-h-[600px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

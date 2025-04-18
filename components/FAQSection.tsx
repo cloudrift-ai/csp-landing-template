@@ -22,7 +22,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full h-full flex items-center justify-center min-h-[900px]" id="faq">
+    <section className="w-full h-full flex items-center justify-center mt-14 md:min-h-[900px]" id="faq">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

@@ -95,7 +95,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   if (props.variant === 'testimonial') {
     return (
-      <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-6 w-[360px]`}>
+      <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-6 w-full max-w-[360px]`}>
         <div className="flex items-center gap-4">
           <div className="relative w-12 h-12">
             <Image 
@@ -148,7 +148,7 @@ const Card: React.FC<CardProps> = (props) => {
       : 'border-accent';
 
     return (
-      <div className={`${baseStyles} ${pricingBorderClass} w-[360px] p-8`}>
+      <div className={`${baseStyles} ${pricingBorderClass} w-full max-w-[360px] p-8`}>
         <div className="flex justify-between items-center mb-6">
           <HiChip className={`w-6 h-6 text-accent`} />
           {props.tier && (
@@ -218,7 +218,7 @@ const Card: React.FC<CardProps> = (props) => {
 
   // Default feature card
   return (
-    <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-5 max-w-[360px]`}>
+    <div className={`${baseStyles} ${borderColorClass} p-6 flex flex-col gap-5 w-full max-w-[360px]`}>
       <div className="flex items-center gap-4">
         <div className="text-accent">
           {props.icon}

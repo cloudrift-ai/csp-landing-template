@@ -4,7 +4,7 @@ import { BsLightningFill, BsHddStackFill, BsHddNetworkFill } from 'react-icons/b
 
 const FeatureSection: React.FC = () => {
   return (
-    <section className="w-full h-auto py-24 max-h-[600px]">
+    <section className="w-full h-auto py-24 md:max-h-[600px]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

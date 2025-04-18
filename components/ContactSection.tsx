@@ -8,7 +8,7 @@ const ContactSection: React.FC = () => {
   const [selectedInterest, setSelectedInterest] = useState<InterestType>('Custom Build');
 
   return (
-    <section className="flex justify-center items-center min-h-[900px]" id="contact">
+    <section className="flex justify-center items-center my-14 md:my-0 md:min-h-[900px]" id="contact">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl">
         <div className="flex flex-col justify-center items-center md:items-start">
           <h2 className="text-4xl font-bold text-foreground mb-4 text-center">Get in Touch</h2>
