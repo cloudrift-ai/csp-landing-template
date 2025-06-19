@@ -72,6 +72,18 @@ export function getRiftProviderPubApiKey(): string | null {
     return process.env.NEXT_PUBLIC_RIFT_API_KEY || null;
 }
 
+export function getRiftProviderName(): string | null {
+    return process.env.NEXT_PUBLIC_RIFT_PROVIDER_NAME || "CloudRift";
+}
+
+export function getRiftProviderLogo(): string | null {
+    return process.env.NEXT_PUBLIC_RIFT_PROVIDER_LOGO || "https://storage.googleapis.com/cloudrift-resources/images/logo/cloudrift.svg";
+}
+
+export function getRiftProviderComputeLogo(): string | null {
+    return process.env.NEXT_PUBLIC_RIFT_PROVIDER_COMPOUND_LOGO || "https://storage.googleapis.com/cloudrift-resources/images/logo/cloudrift_compound_white.svg";
+}
+
 export function getRiftApiVersion(): string {
     const RIFT_PROD_API_VERSION = "2025-02-10";
     if (process.env.NEXT_PUBLIC_VERCEL_ENV === 'production') {

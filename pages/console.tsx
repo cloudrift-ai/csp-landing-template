@@ -1,5 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
-import {getRiftConsoleUrl, getRiftProviderPubApiKey, getWithPublicIP} from "@/lib/cloudrift";
+import {
+    getRiftConsoleUrl,
+    getRiftProviderComputeLogo, getRiftProviderLogo,
+    getRiftProviderName,
+    getRiftProviderPubApiKey,
+    getWithPublicIP
+} from "@/lib/cloudrift";
 
 const Console = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
@@ -16,9 +22,9 @@ const Console = () => {
             type: 'SET_PROVIDER_CONFIG',
             payload: {
               providerPubKey: getRiftProviderPubApiKey(),
-              providerName: 'CloudRift',
-              logo: 'https://storage.googleapis.com/cloudrift-resources/images/logo/cloudrift.svg',
-              compoundLogo: 'https://storage.googleapis.com/cloudrift-resources/images/logo/cloudrift_compound_white.svg',
+              providerName: getRiftProviderName(),
+              logo: getRiftProviderLogo(),
+              compoundLogo: getRiftProviderComputeLogo(),
               withPublicIP: getWithPublicIP(),
             }
           }, '*');
