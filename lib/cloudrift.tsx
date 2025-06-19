@@ -80,3 +80,7 @@ export function getRiftApiVersion(): string {
         return "~upcoming";
     }
 }
+
+export function getWithPublicIP(): boolean {
+  return process.env.NEXT_PUBLIC_WITH_PUBLIC_IP === 'true' || process.env.NEXT_PUBLIC_WITH_PUBLIC_IP === null && process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
+}
