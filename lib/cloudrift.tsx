@@ -94,5 +94,8 @@ export function getRiftApiVersion(): string {
 }
 
 export function getWithPublicIP(): boolean {
-  return process.env.NEXT_PUBLIC_WITH_PUBLIC_IP === 'true' || process.env.NEXT_PUBLIC_WITH_PUBLIC_IP === null && process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
+    if (process.env.NEXT_PUBLIC_WITH_PUBLIC_IP !== null) {
+        return process.env.NEXT_PUBLIC_WITH_PUBLIC_IP === 'true'
+    }
+    return process.env.NEXT_PUBLIC_VERCEL_ENV === 'production';
 }
