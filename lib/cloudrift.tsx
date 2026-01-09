@@ -21,11 +21,6 @@ export async function apiRequest<TResponse, TRequest extends object = object>(
     'Content-Type': 'application/json',
   };
 
-  const key = getRiftProviderPubApiKey();
-  if (key) {
-    headers['X-API-Key'] = key;
-  }
-
   // Methods that can have a body
   const methodsWithBody = ['POST', 'PUT', 'PATCH'];
   const shouldIncludeBody = methodsWithBody.includes(method.toUpperCase());
