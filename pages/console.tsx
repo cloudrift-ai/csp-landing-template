@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
 import {
     getRiftConsoleUrl,
-    getRiftProviderComputeLogo, getRiftProviderLogo,
+    getRiftProviderComputeLogo,
+    getRiftProviderLogo,
     getRiftProviderName,
-    getRiftProviderPubApiKey,
     getWithPublicIP
 } from "@/lib/cloudrift";
 
@@ -21,11 +21,10 @@ const Console = () => {
           iframeRef.current?.contentWindow?.postMessage({
             type: 'SET_PROVIDER_CONFIG',
             payload: {
-              providerPubKey: getRiftProviderPubApiKey(),
               providerName: getRiftProviderName(),
               logo: getRiftProviderLogo(),
               compoundLogo: getRiftProviderComputeLogo(),
-              withPublicIP: getWithPublicIP(),
+              withPublicIp: getWithPublicIP(),
             }
           }, '*');
         }
